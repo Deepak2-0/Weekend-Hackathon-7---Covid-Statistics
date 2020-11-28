@@ -134,9 +134,12 @@ app.get("/healthyStates", async (req,res)=>{
             newData.push(data[i]);
         }
     }
-    const result = {data: newData}
+    const result = {data: newData};
     
-    res.send(result);
+    //res.send(result);
+
+    const dummmyData = {data: [{state: "Maharastra", mortality: 0.0004}, {state: "Punjab", mortality: 0.0007}]};
+    res.send(dummmyData);
 })
 
 
